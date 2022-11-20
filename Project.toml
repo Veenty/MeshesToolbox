@@ -3,6 +3,14 @@ uuid = "f5c3dc73-c322-4b0e-9e6f-8420cbe222d2"
 authors = ["Veenty <vicentegomezh@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+ColorSchemes = "35d6a980-a343-548e-a6ea-1d62b119f2f4"
+GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
+MeshViz = "9ecf9c4f-6e5a-4b5e-83ae-06f2c7a661d8"
+Meshes = "eacbb407-ea5a-433e-ab97-5258b1ca43fa"
+PlyIO = "42171d58-473b-503a-8d5f-782019eb09ec"
+ScatteredInterpolation = "3f865c0f-6dca-5f4d-999b-29fe1e7e3c92"
+
 [compat]
 julia = "1"
 
