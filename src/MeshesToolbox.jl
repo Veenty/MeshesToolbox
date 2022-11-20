@@ -102,15 +102,8 @@ function SaveMesh(filename, mesh, color_scale, colormap)
 
     for  i ∈ ind 
 
-        if length(i) == 3
-            push!(vertex_index, i .-1)
-        elseif length(i) == 4
-            trian1 = i[1:3] .-1
-            trian2 = (i[1], i[3], i[4]) .-1
-            push!(vertex_index, trian1)
-            push!(vertex_index, trian2 )    
-        
-        end    
+        push!(vertex_index, i .-1)
+   
         
     end
 
@@ -172,15 +165,8 @@ function SaveMesh(filename, mesh, color_scale, colorrange,colormap)
 
     for  i ∈ ind 
 
-        if length(i) == 3
-            push!(vertex_index, i .-1)
-        elseif length(i) == 4
-            trian1 = i[1:3] .-1
-            trian2 = (i[1], i[3], i[4]) .-1
-            push!(vertex_index, trian1)
-            push!(vertex_index, trian2 )    
-        
-        end    
+        push!(vertex_index, i .-1)
+  
         
     end
 
