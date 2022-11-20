@@ -11,7 +11,7 @@ function ParametricConstructor(ϕ,us, vs, periodic)
 
     vertex = [Point3(ϕ(u,v)...) for u in us for v in vs]
 
-    topo = GridTopology( (length(vs)-1 , length(us)-1) + periodic, periodic)
+    topo = GridTopology( (length(vs)-1 , length(us)-1) .+ periodic, periodic)
     mesh = SimpleMesh(vertex, topo)
 
     return mesh
@@ -31,7 +31,7 @@ function SquareConstructor(X, Y, Z, periodic)
     println("largo de esta lista ", length(vertex))
 
     #note that the entries go the other way 
-    topo = GridTopology( (Nv-1, Nu-1 ) + periodic, periodic)
+    topo = GridTopology( (Nv-1, Nu-1 ) .+ periodic, periodic)
 
     return SimpleMesh(vertex, topo)
 
@@ -117,9 +117,9 @@ function SaveMesh(filename, mesh, color_scale, colormap)
     push!(ply, PlyElement("face", vertex_index))
 
     if endswith(filename, ".ply")
-        save_ply(ply,filename, ascii=true)
+        save_ply(ply,filename, ascii=false)
     else
-        save_ply(ply,filename*".ply", ascii=true)
+        save_ply(ply,filename*".ply", ascii=false)
     end
   
 
@@ -187,9 +187,9 @@ function SaveMesh(filename, mesh, color_scale, colorrange,colormap)
     push!(ply, PlyElement("face", vertex_index))
 
     if endswith(filename, ".ply")
-        save_ply(ply,filename, ascii=true)
+        save_ply(ply,filename, ascii=false)
     else
-        save_ply(ply,filename*".ply", ascii=true)
+        save_ply(ply,filename*".ply", ascii=false)
     end
   
 

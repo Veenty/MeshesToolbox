@@ -70,7 +70,7 @@ viz(new_mesh)
 #testing save mesh
 
 sphere = Sphere((0.,0.,0.), 1.)
-mesh = discretize(sphere, RegularDiscretization(100,100))
+mesh = discretize(sphere, RegularDiscretization(50,150))
 viz(mesh)
 new_mesh = mesh_transform(sphere_transform, mesh)
 viz(new_mesh)
