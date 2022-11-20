@@ -70,15 +70,15 @@ viz(new_mesh)
 #testing save mesh
 
 sphere = Sphere((0.,0.,0.), 1.)
-mesh = discretize(sphere, RegularDiscretization(50,150))
+mesh = discretize(sphere, RegularDiscretization(10,60))
 viz(mesh)
 new_mesh = mesh_transform(sphere_transform, mesh)
-viz(new_mesh)
+viz(new_mesh, showfacets = true)
 reduce(hcat,coordinates.(vertices(mesh)))
 color_scale = [ sqrt(coordinates(p)[1]^2 +coordinates(p)[2]^2)  for p in vertices(new_mesh)]
 
-SaveMesh("Spindle", new_mesh, color_scale, :inferno)
-SaveMesh("Spindle", new_mesh, color_scale, (-1, 0.2), :inferno)
+SaveMesh("test_square", new_mesh, color_scale, :inferno)
+# SaveMesh("Spindle", new_mesh, color_scale, (-1, 0.2), :inferno)
 
 
 @testset "MeshesToolbox.jl" begin
