@@ -12,6 +12,7 @@ PlyIO = "42171d58-473b-503a-8d5f-782019eb09ec"
 ScatteredInterpolation = "3f865c0f-6dca-5f4d-999b-29fe1e7e3c92"
 
 [compat]
+Meshes = "0.28"
 julia = "1"
 
 [extras]
